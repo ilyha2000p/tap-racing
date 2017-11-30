@@ -5,7 +5,15 @@
 </template>
 
 <script type="text/javascript">
-	
+	export default {
+		name: 'game',
+		
+		data: function(){
+			return {
+
+			}
+		}
+	}
 </script>
 
 <style type="text/css">

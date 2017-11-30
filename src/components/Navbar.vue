@@ -15,17 +15,21 @@
 	    </div>
 	  </div>
 
-	  <span class="navbar-text" @setNick='setNickname'>
-	  	{{nick}}
+	  <span class="navbar-text">
+	  	{{nickText}}
 	  </span>
 	</nav>
 </template>
 
 <script type="text/javascript">
 	export default {
+		name: 'navbar',
+
+		props: ['nickText'],
+		
 		data: function(){
 			return {
-				nick : ''
+				//nick : nickText
 			}
 		},
 

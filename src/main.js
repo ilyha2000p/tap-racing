@@ -1,15 +1,11 @@
 import Vue from 'vue'
 
-import Navbar from './components/Navbar.vue'
-import MainConteiner from './components/MainConteiner.vue'
-
-
-Vue.component('navbar', Navbar);
-Vue.component('main-conteiner', MainConteiner)
+import App from './App.vue'
 
 
 
 var app = new Vue({
   el: '#app',
-  
+
+  render: h => h(App)
 })

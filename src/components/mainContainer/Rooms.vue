@@ -30,6 +30,8 @@
 
 <script type="text/javascript">
 	export default {
+		name: 'rooms',
+		
 		data: function(){
 			return {
 				roomNameText: "",
