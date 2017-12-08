@@ -1,6 +1,6 @@
 <template>
 	<nav class="navbar navbar-expand-lg navbar-dark">
-	  <a class="navbar-brand" href="#">
+	  <a class="navbar-brand" href="/">
 	  	<img src="../assets/images/car.png" height="64" width="64">
 	  	<span>tap-racing</span>
 	  </a>
@@ -29,7 +29,7 @@
 		
 		data: function(){
 			return {
-				//nick : nickText
+				
 			}
 		},
 

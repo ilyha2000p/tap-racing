@@ -1,7 +1,7 @@
 <template>
-	<form>
+	<form autocomplete="off">
 		<div class="form-group row justify-content-center">
-			<input class="form-control col-sm-6" type="text" name="nick" placeholder="Enter the nick" autocomplete="false" v-model="nickText">
+			<input class="form-control col-sm-6" type="text" name="nick" placeholder="Enter the nick" autocomplete="false" onkeypress="if(event.keyCode == 13) return false;" v-model="nickText">
 		</div>		
 
 		<div class="row justify-content-center">
@@ -34,6 +34,17 @@
 			setNick: function(){
 				this.$emit('setNick', this.nickText);
 				this.nickText = '';
+
+				axios({
+					method: 'post',
+					url: 'http://localhost:8000/rooms'
+				})
+					.then(function(res){
+						location.replace('/#/rooms');
+					})
+					.catch(function(err){
+						alert('error!!!');
+					});
 			}
 		}
 	}
@@ -41,7 +52,7 @@
 
 <style scoped type="text/css">
 	.form-group {
-		padding: 10px;
+		padding: 10px 0px 10px 0px;
 	}
 
 	.btn{

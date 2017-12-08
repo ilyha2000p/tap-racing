@@ -111,19 +111,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 		function forwardMove(gameObject, keyCode, score){
 			var key = keyboard(keyCode);
-			//var realWindow = window;
 
 			key.release = function(){
 				if((parseInt(redScore.text, 10) < 100) && (parseInt(blueScore.text, 10) < 100)){
@@ -134,9 +123,24 @@
 					blueCar.vy = 0;
 				}
 
+				if(parseInt(redScore.text,10) == 100){
+					alert('Red');
+				}else if(parseInt(blueScore.text,10) == 100){
+					alert('Blue');
+				}
+
 				gameObject.y += gameObject.vy;
 			}
 		}
+
+
+
+
+
+
+
+
+
 
 		//-----------------------------------------------
 
